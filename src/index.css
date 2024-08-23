@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Detective Theme */
+  .bg-dark-blue {
+    background-color: #2C3E50;
+  }
+  .btn-gold {
+    background-color: #F39C12;
+    color: #ECF0F1;
+  }
+
+  /* Natural Theme */
+  .bg-forest-green {
+    background-color: #2E8B57;
+  }
+  .btn-brown {
+    background-color: #8B4513;
+    color: #FFFFFF;
+  }
+
+  /* Adventurous Theme */
+  .bg-deep-orange {
+    background-color: #FF5722;
+  }
+  .btn-sky-blue {
+    background-color: #87CEEB;
+    color: #FFFFFF;
+  }
+}
+
+
+
+
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  25% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  75% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
+.animate-heartbeat {
+  animation: heartbeat 2s infinite;
+}
+
+
+
+
+
+@layer base{
+    *{
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    html {
+      font-family: "Bungee Shade", sans-serif;
+    }
+
+    body{
+        background-color:#252525;
+        color:white;
+    }
+
+}
+
+
+
+@layer utilities {
+  .stylish-btn{
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em black;
+    cursor: pointer;
+  }
+ 
+  .stylish-btn:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em black;
+  }
+  
+  .stylish-btn:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em black;
+  }
+
+}
+
+
+.main-app{
+  background-image: url(./assets/bg.png);
+  background-attachment: fixed;
+  background-size:cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.team-list li:before {
+  content: "👤";
+  margin-right:4px;
+}
